@@ -1,19 +1,16 @@
 #include <iostream>
 using namespace std;
 
-enum colour { red, yellow, blue, white, black };
-
 int main() {
-    colour c;
+    long long fact = 1;
+    long long sum = 0;
 
-    c = red;
-    cout << "red: " << c << endl; // 输出 0
+    for (int i = 1; i <= 10; i++) {
+        fact *= i;
+        sum += fact;
+    }
 
-    c = blue;
-    cout << "blue: " << c << endl; // 输出 2
-
-    c = black;
-    cout << "black: " << c << endl; // 输出 4
-
+    cout << "10!=" << fact << endl;
+    cout << "sum of 1! to 10!=" << sum << endl;
     return 0;
 }
