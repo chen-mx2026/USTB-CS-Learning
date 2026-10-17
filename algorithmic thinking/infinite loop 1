@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    while (true)
+    {
+        char x;
+        cin >> x;
+        cout << "测试三角形吗？ ";
+        if (x == 'n' || x == 'N')
+        {
+            cout << "测试结束！";
+            break;
+        }
+        if (x == 'y' || x == 'Y')
+        {
+            int a, b, c;
+            cin >> a >> b >> c;
+
+            if (a == b && a == c && b == c)
+            {
+
+                           cout << "a, b, c = 等边三角形！\n";
+            }
+            else if (a == b || a == c || b == c)
+            {
+                cout << "a, b, c = 等腰三角形！\n";
+            }
+            else if (a >= b + c || c >= a + b || b >= a + c)
+            {
+                cout << "error\n";
+            }
+            else
+            {
+                cout << "a, b, c = 一般三角形！\n";
+            }
+        }
+    }
+
+    return 0;
+}
