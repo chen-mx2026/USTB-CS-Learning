@@ -1,0 +1,17 @@
+cat 命令：
+1. cat 命令可查看文件内容；语法：cat [选项] FileList
+   例：cat /etc/hosts
+   注：使用 cat 命令显示文件是从头显示到尾，cat 命令更适合显示小于一页终端大小的文件。
+
+2. cat 命令可用来生成新文件
+   例：创建文件 fileA：
+   cat > fileA << EOF
+   create short file fileA through command cat!
+   EOF
+   注1：> 为重定向输出符号，将命令的输出显示（或保存）到后面的设备文件中（此处是将输出重定向到文件 fileA 中）。
+   注2：<< 是重定向输入符号，<<EOF：当输入的 3 个连续字符为 "EOF" 时，结束输入重定向。
+
+3. cat 命令用来合并两个及以上文件
+   写法：cat fileA fileB > fileC
+   查看：cat fileC
+   注：在使用 cat 命令对多个文件进行合并时，在 > 后必须使用新文件名（fileC），防止数据丢失/覆盖。
